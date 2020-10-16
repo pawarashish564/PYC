@@ -1,5 +1,7 @@
 import myModule
 
-dir(myModule)
+# dir(myModule)
 
-myModule.helloworld()
+# myModule.helloworld()
+
+print(myModule.fib(10))
