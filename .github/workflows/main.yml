@@ -38,4 +38,4 @@ jobs:
           CI_USER: ${{ secrets.USRNAME }}
           CI_TOKEN: ${{ secrets.TOKEN }}
         run: |
-          git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
+          git push "https://$CI_USER:$CI_TOKEN@github.com/PYC.git" HEAD:master
