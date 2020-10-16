@@ -1,10 +1,7 @@
 name: Changelog
 
-on:
-  push:
-    branches:
-      - master
-
+on: push
+    
   # pull_request:
     # types: [closed]
 
@@ -24,12 +21,12 @@ jobs:
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1.1
         with:
-          token: ${{ secrets.YOUR_GITHUB_TOKEN or GITHUB_TOKEN }}
+          token: ${{ secrets.TOKEN }}
 
       - name: Commit files
         env:
-          CI_USER: ${{ secrets.YOUR_GITHUB_USER }}
-          CI_EMAIL: ${{ secrets.YOUR_GITHUB_EMAIL }}
+          CI_USER: ${{ secrets.USRNAME }}
+          CI_EMAIL: ${{ secrets.EMAIL }}
         run: |
           git config --local user.email "$CI_EMAIL"
           git config --local user.name "$CI_USER"
@@ -38,7 +35,7 @@ jobs:
       - name: Push changes
         if: env.push == 1
         env:
-          CI_USER: ${{ secrets.YOUR_GITHUB_USER }}
-          CI_TOKEN: ${{ secrets.YOUR_GITHUB_TOKEN or GITHUB_TOKEN }}
+          CI_USER: ${{ secrets.USRNAME }}
+          CI_TOKEN: ${{ secrets.TOKEN }}
         run: |
           git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
