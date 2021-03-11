@@ -25,4 +25,4 @@ After that just run `python -c "import module_name"`.
 
 ### 📃 LICENSE
 
-MIT ⓒ [Aashish Pawar]().
+ⓒ [Aashish Pawar]().
