@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="logo.not.found" />
+  <img src=".github/logo-pyc-1024x535.jpg" widht="80" height = "80" />
 
   PYC for Python Extensions testing
 </h1>
